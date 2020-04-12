@@ -43,7 +43,7 @@ live_loop :bass do
   use_synth :mod_beep
   sleep 8
   16.times do
-    play 35, amp: 2
+    play 35
     sleep 4
   end
 end
@@ -53,5 +53,21 @@ live_loop :luuppi do
   8.times do
     sample :loop_breakbeat, beat_stretch: 4
     sleep 4
+  end
+end
+
+live_loop :piano do
+  sleep 32
+  8.times do
+    4.times do
+      use_synth :piano
+      play :C1, vel: 0.1, amp: 0.8, sustain: 1, hard: 0.5
+      sleep 1
+    end
+    4.times do
+      use_synth :piano
+      play :C2, vel: 0.1, amp: 0.8, sustain: 1
+      sleep 1
+    end
   end
 end
