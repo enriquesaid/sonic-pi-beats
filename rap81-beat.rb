@@ -17,9 +17,7 @@ live_loop :kick_and_snare do
   sample :elec_hi_snare, amp: 1
   sleep 1.5
   sample :elec_hi_snare, amp: 1
-  sleep 0.5
-  sample :bd_808, rate: 1, amp: 4
-  sleep 0.25
+  sleep 0.75
   sample :elec_hi_snare, amp: 1
   sleep 0.75
 end
