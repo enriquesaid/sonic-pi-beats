@@ -43,7 +43,7 @@ live_loop :bass do
   use_synth :mod_beep
   sleep 8
   8.times do
-    play 40
+    play 35
     sleep 4
   end
 end
