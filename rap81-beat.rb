@@ -42,22 +42,16 @@ end
 live_loop :bass do
   use_synth :mod_beep
   sleep 8
-  8.times do
-    play 35
+  16.times do
+    play 35, amp: 2
     sleep 4
   end
 end
 
 live_loop :luuppi do
-  sample :loop_breakbeat, beat_stretch: 4
-  sleep 4
-end
-
-live_loop :ujellus do
-  with_fx :echo, phase: 1.5, mix: 0.5 do
-    use_synth :mod_beep
-    use_synth_defaults mod_phase: 0.1, pulse_width: 0.8, mod_wave: 2
-    play [:G7, :G5, :G6].choose, amp: 0.015
-    sleep 8
+  sleep 32
+  8.times do
+    sample :loop_breakbeat, beat_stretch: 4
+    sleep 4
   end
 end
