@@ -25,6 +25,14 @@ live_loop :kick_and_snare do
 end
 
 live_loop :hihat do
+  sleep 2
+  2.times do
+    sample :drum_cymbal_closed, amp: 0.5
+    sleep 0.5
+    sample :drum_cymbal_closed, amp: 0.5
+    sleep 1
+  end
+
   sample :drum_cymbal_closed, amp: 0.5
   sleep 0.5
   sample :drum_cymbal_pedal, amp: 0.5
@@ -33,8 +41,11 @@ end
 
 live_loop :bass do
   use_synth :mod_beep
-  play 40
-  sleep 4
+  sleep 8
+  8.times do
+    play 40
+    sleep 4
+  end
 end
 
 live_loop :luuppi do
