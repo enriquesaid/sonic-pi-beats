@@ -39,9 +39,9 @@ end
 
 live_loop :bass do
   use_synth :mod_beep
-  sleep 8
+  sleep 32
   16.times do
-    play 35
+    play 35, release: 2, amp: 0.8
     sleep 8
   end
 end
@@ -60,13 +60,13 @@ live_loop :piano do
     8.times do
       4.times do
         use_synth :piano
-        play :C1, vel: 0.1, amp: 1, sustain: 1, hard: 0.5
+        play :C1, vel: 0.1, amp: 1, sustain: 1, hard: 0.5, release: 2
         play :C2, vel: 0.2, amp: 0.25, hard: 0.5, release: 0.5
         sleep 1
       end
       4.times do
         use_synth :piano
-        play :C2, vel: 0.1, amp: 1, sustain: 1
+        play :C2, vel: 0.1, amp: 1, sustain: 1, release: 2
         play :C3, vel: 0.2, amp: 0.25, release: 0.5
         sleep 1
       end
